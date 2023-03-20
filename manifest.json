@@ -1,0 +1,65 @@
+{
+  "name": "App Name",
+  "version": "1.0",
+  "author": "Author Name",
+  "description": "Description Name",
+  "type": "feature",
+  "usage": "workout",
+  "modificationTime": 1674690409, 
+  "in": [
+    {
+      "name": "DurationAscent",
+      "source": "/Fusion/Altitude/AscentTime",
+      "type": "subscribe"
+    },
+    {
+      "name": "DurationDescent",
+      "source": "/Fusion/Altitude/DescentTime",
+      "type": "subscribe"
+    },
+    {
+      "name": "AscentMeters",
+      "source": "/Fusion/Altitude/Ascent",
+      "type": "subscribe"
+    },
+    {
+      "name": "DescentMeters",
+      "source": "/Fusion/Altitude/Descent",
+      "type": "subscribe"
+    },
+    {
+      "name": "Distance",
+      "source": "/Activity/Current/Distance",
+      "type": "subscribe"
+    }
+  ],
+  "out": [
+    {
+      "name": "climbAttempts"
+    },
+    {
+      "name": "climbAttemptAscent"
+    },
+    {
+      "name": "climbDurationAscent",
+      "log": true,
+      "shownName": "Duration Ascent",
+      "format": "Duration_Fourdigits"     
+    },
+    {
+      "name": "climbDurationAscentDescent",
+      "log": true,
+      "shownName": "Duration Ascent Descent",
+      "format": "Duration_Fourdigits"
+    },
+    {
+      "name": "climbAngleAscent",
+      "log": true,
+      "shownName": "Angle of Ascent",
+      "format": "Count_Threedigits"
+    }
+  ],
+  "template": [
+    { "name": "t.html" }
+  ]
+}
